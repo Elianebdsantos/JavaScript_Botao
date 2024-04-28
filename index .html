@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Manipulando a DOM</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- DIV que será manipulada -->
+  <div id="manipula">
+    
+  <p class="paragrafo">Com base nos argumentos apresentados na aula, é possivel entender que uma coisa é uma coisa e outra coisa é outra coisa, admito que não concordo nem discordo, muito pelo contrário.</p>
+    <p class="paragrafo">É factivel que a Terra é um dos planetas mais conhecidos do mundo, mesmo sabendo que a vida é uma sucessão de sucessivos que sucedem sucessivamente sem cessar.Agora, mais do que nunca, é a hora, afinal, o importante é o que importa, pois onde quer que você esteja, você sempre estará lá.</p>
+  </div>
+  <!-- FIM da DIV que foi manipulada -->
+
+
+  <h2 class="chamada"> Altere o Texto acima clicando nos botões</h2>
+
+
+  <!-- DIV que armazenará todos os botões -->
+  <div id="botoes">
+    <!-- Botão 1 - -->
+    <input type="button" value="Atualizar" onclick="window.location.reload()" />
+    <!--Fim Botão 1-->
+
+    <!-- Botão 2 - -->
+    <input type="button" value="Alterar Tamanho Fonte" onclick="alterarfonte()" />
+    <!--Fim Botão 2-->
+
+    <!-- Botão 3 - -->
+    <input type="button" value="Alterar Cor Fonte"  onclick="cortexto()"/>
+    <!--Fim Botão 3-->
+
+    <!-- Botão 4 - -->
+    <input type="button" value="Alterar cor div" onclick="alterarcordiv()" />
+    <!--Fim Botão 4-->
+
+    <!-- Botão 5 - -->
+    <input type="button" value="Italico" onclick="italico()" />
+    <!--Fim Botão 5-->
+
+    <!-- Botão 6 - -->
+    <input type="button" value="Negrito"  onclick="negrito()"/>
+    <!--Fim Botão 6-->
+
+    <!-- Botão 7 - -->
+    <input type="button" value="Borda" onclick="borda()" />
+    <!--Fim Botão 7-->
+
+    <!-- Botão 8 - -->
+    <input type="button" value="Sem borda" onclick="semborda()"/>
+    <!--Fim Botão 8-->
+
+    <!-- Botão 9 - -->
+    <input type="button" value="Esconder DIV" onclick="esconderdiv()" />
+    <!--Fim Botão 9-->
+
+    <!-- Botão 10 - -->
+    <input type="button" value="Mostrar DIV" onclick="mostrardiv()" />
+    <!--Fim Botão 10-->
+
+    <!-- Botão 11 - -->
+    <input type="button" value="Não" onclick="nao()"/>
+    <!--Fim Botão 11-->
+
+    <!-- Botão 12 - -->
+    <input type="button" value="Back paragrafo" onclick="backgroundp()" />
+    <!--Fim Botão 12-->
+
+    <!-- Botão 13 - -->
+    <input type="button" value="Cor do Botão" onclick="mudacorbotao()"/>
+    <!--Fim Botão 13-->
+
+
+    <!-- Botão 14 - -->
+    <input type="button" value="Todos botoes" onclick="mudacorbotoes()"/>
+    <!--Fim Botão 14-->
+
+    <!-- Botão 15 - -->
+    <input type="button" value="Contar botoes" onclick="contarbotao()" />
+    <!--Fim Botão 15-->
+
+    <!-- Botão 16 - -->
+    <input type="button" value="Censura" onclick="censura()"/>
+    <!--Fim Botão 16-->
+
+    <!-- Botão 17 - -->
+    <input type="button" value="Fundo" onclick="fundo()"/>
+    <!--Fim Botão 17-->
+
+    <!-- Botão 18 - -->
+    <input type="button" value="Imagem" onclick="imagem()"/>
+    <!--Fim Botão 18-->
+
+  </div>
+  <!-- FIM da DIV que armazena todos os botões -->
+
+
+  <img id="image" src="xuxa.jpg">
+
+  <script> // Começa a brincadeira com JS
+
+    // Botão 2 - xx
+    function alterarfonte() {
+      document.getElementById("manipula").style.fontSize = "20pt"
+
+    }
+    //fim do Botão 2
+    // Botão 3 - xx
+    function cortexto() {
+      document.getElementById("manipula").style.color = "#3283a8"
+}
+//fim do Botão 3
+    // Botão 4 - xx
+    function alterarcordiv() {
+      document.getElementById("manipula").style.backgroundColor = "#b6c7cf"
+}
+//fim do Botão 4
+    // Botão 5 - xx
+    function italico() {
+      document.getElementById("manipula").style.fontStyle = "italic"
+}
+//fim do Botão 5
+    // Botão 6 - xx
+    function negrito() {
+      document.getElementById("manipula").style.fontWeight = "bold"
+    }
+    //fim do Botão 6
+    // Botão 7 - xx
+    function borda() {
+      document.getElementById("manipula").style.border = "2px solid black"
+    }
+    //fim do Botão 7
+    // Botão 8 - xx
+    function semborda() {
+      document.getElementById("manipula").style.border = ""
+    }
+    //fim do Botão 8
+    // Botão 9 - xx
+    function esconderdiv() {
+      document.getElementById("manipula").style.display = "none"
+    }
+    //fim do Botão 9
+    // Botão 10 - xx
+    function mostrardiv() {
+      document.getElementById("manipula").style.display = "block"
+    }
+    //fim do Botão 10
+    // Botão 11 
+    function nao() {
+      document.getElementsByClassName("chamada")[0].innerHTML = "Nesse botão NÃO"
+    }
+    //fim do Botão 11
+    // Botão 12
+    function backgroundp() {
+      document.getElementById("manipula").getElementsByClassName("paragrafo")[0].style.backgroundColor="red"
+      document.getElementById("manipula").getElementsByClassName("paragrafo")[1].style.backgroundColor="yellow"
+    }
+    //fim do Botão 12
+    // Botão 13 - xx
+    function mudacorbotao() {
+      document.getElementsByTagName("input")[0].style.backgroundColor= "green"
+
+    }
+    //fim do Botão 13
+    // Botão 14 - xx
+    function mudacorbotoes() {
+      var x = document.getElementById('botoes')
+      var y = x.getElementsByTagName("input")
+      var i
+      for (i= 0; i < y.length; i++){
+        y[i].style.backgroundColor= "red"
+
+      }
+        
+    }
+    //fim do Botão 14
+
+
+    // Botão 15- xx
+    function contarbotao() {
+      let x= document.getElementById("botoes").getElementsByTagName("input")
+      document.getElementById("manipula").innerHTML= x.length
+
+    }
+    //fim do Botão 15
+    // Botão 16 - censura
+    function censura() {
+      document.querySelector("p.paragrafo").innerHTML= "**********";
+    }
+//fim do Botão 16
+
+ // Botão 17 - 
+ function fundo() {
+      document.querySelector("body").style.backgroundColor= "black"
+    }
+//fim do Botão 17
+
+ // Botão 18 - 
+ function imagem() {
+      var img= document.querySelector('#image')
+      img.setAttribute('src','alien.jpg')
+    }
+
+//fim do Botão 18
+  </script> <!-- Termina a brincadeira com JS -->
+
+  <br>
+  <hr>
+</body>
+
+</html>
